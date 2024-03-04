@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-29T09:24:43 IST" name="Default suite" finished-at="2024-02-29T09:26:51 IST" duration-ms="128220">
+    <groups>
+    </groups>
+    <test started-at="2024-02-29T09:24:43 IST" name="Default test" finished-at="2024-02-29T09:26:51 IST" duration-ms="128220">
+      <class name="testng_hackathon.LoanCalculator">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:24:44 IST" name="setup" finished-at="2024-02-29T09:24:58 IST" duration-ms="14188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLogo()[pri:1, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:24:58 IST" name="testLogo" finished-at="2024-02-29T09:24:59 IST" duration-ms="265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogo -->
+        <test-method signature="Car_Loan()[pri:2, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:24:59 IST" name="Car_Loan" finished-at="2024-02-29T09:25:08 IST" duration-ms="8996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Car_Loan -->
+        <test-method signature="EMI_Calculation()[pri:3, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:25:09 IST" name="EMI_Calculation" finished-at="2024-02-29T09:25:09 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EMI_Calculation -->
+        <test-method signature="Home_Loan()[pri:4, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:25:09 IST" name="Home_Loan" finished-at="2024-02-29T09:25:12 IST" duration-ms="2840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Loan -->
+        <test-method signature="HomeLoan_Data()[pri:5, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:25:12 IST" name="HomeLoan_Data" finished-at="2024-02-29T09:25:18 IST" duration-ms="5995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomeLoan_Data -->
+        <test-method signature="HomeLoan_Write()[pri:6, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:25:18 IST" name="HomeLoan_Write" finished-at="2024-02-29T09:25:34 IST" duration-ms="15563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomeLoan_Write -->
+        <test-method signature="Test1()[pri:7, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:25:34 IST" name="Test1" finished-at="2024-02-29T09:25:55 IST" duration-ms="21295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method signature="Test12()[pri:8, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:25:56 IST" name="Test12" finished-at="2024-02-29T09:26:01 IST" duration-ms="5129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test12 -->
+        <test-method signature="Test2()[pri:8, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:26:01 IST" name="Test2" finished-at="2024-02-29T09:26:24 IST" duration-ms="22864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method signature="Test3()[pri:9, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:26:24 IST" name="Test3" finished-at="2024-02-29T09:26:50 IST" duration-ms="25654" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:testng_hackathon.LoanCalculator@14dd9eb7]" started-at="2024-02-29T09:26:50 IST" name="close" finished-at="2024-02-29T09:26:51 IST" duration-ms="1242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- testng_hackathon.LoanCalculator -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
