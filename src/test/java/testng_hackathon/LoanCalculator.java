@@ -3,6 +3,7 @@ package testng_hackathon;
 import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 
@@ -37,7 +38,7 @@ public class LoanCalculator {
 	static DriverSetUp d;
 
 	@BeforeClass
-	void setup() throws InterruptedException {
+	void setup() throws InterruptedException, MalformedURLException {
 		d = new DriverSetUp();
 		driver = d.SelectDriver();
 	}
