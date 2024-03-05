@@ -7,11 +7,11 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import Project.DriverSetUp;
 import Project.Hometest;
 import Project.LoanCal1;
 import Project.LoanCal2;
@@ -26,17 +26,14 @@ public class SmokeTest {
 	LoanCal1 lc1;
 	LoanCal2 lc2;
 	LoanCal3 lc3;
-	static DriverSetUp d;
 
 	@BeforeClass
 	public void setup() throws InterruptedException, MalformedURLException {
 
-		d = new DriverSetUp();
-		driver = d.SelectDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get("https://emicalculator.net/");
-		Thread.sleep(5000);
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		driver.get("https://emicalculator.net/");
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
 
 	@Test(priority = 1)
@@ -50,9 +47,10 @@ public class SmokeTest {
 	@Test(priority = 2)
 	public void home_Loan() {
 		ht = new Hometest(driver);
-		ht.HomeClick();
+		String home =  ht.HomeClick();
 		System.out.println("Smoke testing for loan loan funtionality is passed");
 		System.out.println();
+		Assert.assertEquals(home, "Home Loan EMI Calculator with Prepayments, Taxes & Insurance");
 	}
 
 	@Test(priority = 3)

@@ -15,7 +15,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import Project.CarLoan;
-import Project.ScreenShort;
+import Project.ScreenShots;
 
 
 public class ExtentedReportManager implements ITestListener{
@@ -39,35 +39,23 @@ public class ExtentedReportManager implements ITestListener{
    
  
 	public void onTestSuccess(ITestResult result) {
-		
 		test = extent.createTest(result.getName()); // create a new enty in the report
 		test.log(Status.PASS, "Test case PASSED is:" + result.getName()); // update status p/f/s
 		try {
-			String imgPath = ScreenShort.ScreenShotTaker(LoanCalculator.driver,result.getName());
+			String imgPath = new ScreenShots().ScreenShotTaker(LoanCalculator.driver,result.getName());
 			test.addScreenCaptureFromPath(imgPath);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
+		
 	}
-//	public void onTestSuccess(ITestResult result) {
-//		test = extent.createTest(result.getName()); // create a new enty in the report
-//		test.log(Status.PASS, "Test case PASSED is:" + result.getName()); // update status p/f/s
-//		try {
-//			String imgPath = new ScreenShort().ScreenShotTaker(LoanCalculator.driver,result.getName());
-//			test.addScreenCaptureFromPath(imgPath);
-//		} catch (Exception e1) {
-//			e1.printStackTrace();
-//		}
-//		
-//	}
  
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
 		test.log(Status.FAIL, "Test case FAILED is:" + result.getName());
 		test.log(Status.FAIL, "Test Case FAILED cause is: " + result.getThrowable()); 
 		try {
-			new ScreenShort();
-			String imgPath = ScreenShort.ScreenShotTaker(LoanCalculator.driver,result.getName());
+			String imgPath = new ScreenShots().ScreenShotTaker(LoanCalculator.driver,result.getName());
 			test.addScreenCaptureFromPath(imgPath);
 		} catch (Exception e1) {
 			e1.printStackTrace();
@@ -83,13 +71,13 @@ public class ExtentedReportManager implements ITestListener{
 
 	public void onFinish(ITestContext context) {
 		extent.flush();
-		String reportFilePath = "C:\\Users\\2303965\\eclipse-workspace\\Hackathon_Project\\reports\\myreport.html";
-        File htmlFile = new File(reportFilePath);
-        try {
-			Desktop.getDesktop().browse(htmlFile.toURI());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//		String reportFilePath = "C:\\Users\\2303965\\eclipse-workspace\\Hackathon_Project\\reports\\myreport.html";
+//        File htmlFile = new File(reportFilePath);
+//        try {
+//			Desktop.getDesktop().browse(htmlFile.toURI());
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
 	}
 
 }

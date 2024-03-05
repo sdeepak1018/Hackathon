@@ -12,11 +12,13 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Project.DriverSetUp;
@@ -28,24 +30,37 @@ import Project.testLogin;
 
 @Listeners(testng_hackathon.ExtentedReportManager.class)
 public class LoanCalculator {
-
-	public static  WebDriver driver;
+	
+	public static WebDriver driver;
 	testLogin lp;
 	Hometest ht;
 	LoanCal1 lc;
 	LoanCal2 lc2;
 	LoanCal3 lc3;
-	static DriverSetUp d;
 
+@Parameters({"browser"})
 	@BeforeClass
-	void setup() throws InterruptedException, MalformedURLException {
-		d = new DriverSetUp();
-		driver = d.SelectDriver();
+	void setup(String browser) throws InterruptedException, MalformedURLException {
+	if(browser.equals("chrome"))
+	{
+	driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://emicalculator.net/");
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	else
+	{
+		driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://emicalculator.net/");
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));	
+	}
 	}
 
 	@Test(priority = 1)
 	void testLogo() throws IOException, AWTException, InterruptedException // Check the page loaded to correct or not
 	{
+		
 		lp = new testLogin(driver);
 		String title = lp.checkHeading();
 		Assert.assertEquals(title, "EMI Calculator for Home Loan, Car Loan & Personal Loan in India");

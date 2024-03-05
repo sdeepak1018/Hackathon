@@ -6,7 +6,7 @@
       <class name="testng_hackathon.LoanCalculator">
         <methods>
           <include name="close"/>
-          <include name="HomeLoan_Write"/>
+          <include name="EMI_Calculation"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testng_hackathon.LoanCalculator -->
