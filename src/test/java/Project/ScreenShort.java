@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hpsf.Date;
@@ -18,7 +19,7 @@ import testng_hackathon.LoanCalculator;
 public class ScreenShort extends LoanCalculator{
 	
 
-	public static String ScreenShotTaker(WebDriver driver,String name) throws IOException, AWTException, InterruptedException {
+	public static  String ScreenShotTaker(WebDriver d,String name) throws IOException, AWTException, InterruptedException {
 		
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);

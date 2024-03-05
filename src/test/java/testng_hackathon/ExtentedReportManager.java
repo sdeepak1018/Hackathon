@@ -1,5 +1,9 @@
 package testng_hackathon;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -10,6 +14,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import Project.CarLoan;
 import Project.ScreenShort;
 
 
@@ -44,6 +49,17 @@ public class ExtentedReportManager implements ITestListener{
 			e1.printStackTrace();
 		}
 	}
+//	public void onTestSuccess(ITestResult result) {
+//		test = extent.createTest(result.getName()); // create a new enty in the report
+//		test.log(Status.PASS, "Test case PASSED is:" + result.getName()); // update status p/f/s
+//		try {
+//			String imgPath = new ScreenShort().ScreenShotTaker(LoanCalculator.driver,result.getName());
+//			test.addScreenCaptureFromPath(imgPath);
+//		} catch (Exception e1) {
+//			e1.printStackTrace();
+//		}
+//		
+//	}
  
 	public void onTestFailure(ITestResult result) {
 		test = extent.createTest(result.getName());
@@ -64,13 +80,16 @@ public class ExtentedReportManager implements ITestListener{
 		test.log(Status.SKIP, "Test case SKIPPED is:" + result.getName());
 	}
  
-//	private void captureScreenshot()
-//	{
-//		String pathofScreenshort = "C:\\Users\\2303965\\eclipse-workspace\\Hackathon_Project\\screenshots\\CarLone.png";
-//		test.addScreenCaptureFromPath(pathofScreenshort);
-//	}
+
 	public void onFinish(ITestContext context) {
 		extent.flush();
+		String reportFilePath = "C:\\Users\\2303965\\eclipse-workspace\\Hackathon_Project\\reports\\myreport.html";
+        File htmlFile = new File(reportFilePath);
+        try {
+			Desktop.getDesktop().browse(htmlFile.toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

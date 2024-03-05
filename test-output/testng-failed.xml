@@ -5,18 +5,9 @@
     <classes>
       <class name="testng_hackathon.LoanCalculator">
         <methods>
-          <include name="testLogo"/>
-          <include name="Car_Loan"/>
           <include name="close"/>
-          <include name="Test12"/>
           <include name="HomeLoan_Write"/>
           <include name="setup"/>
-          <include name="Test2"/>
-          <include name="EMI_Calculation"/>
-          <include name="HomeLoan_Data"/>
-          <include name="Test3"/>
-          <include name="Home_Loan"/>
-          <include name="Test1"/>
         </methods>
       </class> <!-- testng_hackathon.LoanCalculator -->
     </classes>

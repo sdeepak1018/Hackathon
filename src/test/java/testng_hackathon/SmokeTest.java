@@ -2,6 +2,7 @@ package testng_hackathon;
 
 import java.awt.AWTException;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -28,7 +29,7 @@ public class SmokeTest {
 	static DriverSetUp d;
 
 	@BeforeClass
-	public void setup() throws InterruptedException {
+	public void setup() throws InterruptedException, MalformedURLException {
 
 		d = new DriverSetUp();
 		driver = d.SelectDriver();
