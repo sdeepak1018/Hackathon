@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng_hackathon.SmokeTest">
+      <class name="testng_hackathon.LoanCalculator">
         <methods>
-          <include name="Loan_cal1"/>
-          <include name="car_Loan"/>
-          <include name="Loan_cal2"/>
-          <include name="home_Loan"/>
           <include name="close"/>
-          <include name="Loan_cal3"/>
+          <include name="HomeLoan_Write"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testng_hackathon.SmokeTest -->
+      </class> <!-- testng_hackathon.LoanCalculator -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

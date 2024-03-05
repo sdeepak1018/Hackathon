@@ -29,7 +29,7 @@ import Project.testLogin;
 @Listeners(testng_hackathon.ExtentedReportManager.class)
 public class LoanCalculator {
 
-	public static WebDriver driver;
+	public static  WebDriver driver;
 	testLogin lp;
 	Hometest ht;
 	LoanCal1 lc;
@@ -43,7 +43,7 @@ public class LoanCalculator {
 		driver = d.SelectDriver();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1,groups = "RegressionTest")
 	void testLogo() throws IOException, AWTException, InterruptedException // Check the page loaded to correct or not
 	{
 		lp = new testLogin(driver);
@@ -51,7 +51,7 @@ public class LoanCalculator {
 		Assert.assertEquals(title, "EMI Calculator for Home Loan, Car Loan & Personal Loan in India");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,groups = {"SmokeTest", "RegressionTest"})
 	void Car_Loan() throws IOException, AWTException, InterruptedException // Enter values into the CarLoan Field
 	{
 		Thread.sleep(5000);
@@ -62,7 +62,7 @@ public class LoanCalculator {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,groups = "RegressionTest")
 	void EMI_Calculation() throws IOException, AWTException, InterruptedException // Calculate The Monthly EMI
 	{
 		int EMI = lp.Loan_EMI();
@@ -72,7 +72,7 @@ public class LoanCalculator {
 		Assert.assertEquals(EMI, test); // Compare the EMI in website and The Calculated EMI
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups = {"SmokeTest", "RegressionTest"})
 	void Home_Loan() // Check the page loaded to correct or not
 	{
 		ht = new Hometest(driver);
@@ -80,14 +80,14 @@ public class LoanCalculator {
 		Assert.assertEquals(home, "Home Loan EMI Calculator with Prepayments, Taxes & Insurance");
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups = "RegressionTest")
 	void HomeLoan_Data() throws IOException {
 		ht.HomeLoan_Details();
 		ht.HomeOwner_Expenses();
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups = "RegressionTest")
 	void HomeLoan_Write() throws IOException, InterruptedException {
 		boolean status = ht.ScrollDown();
 		Thread.sleep(5000);
@@ -95,7 +95,7 @@ public class LoanCalculator {
 		Assert.assertEquals(status, true);
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,groups = {"SmokeTest", "RegressionTest"})
 	public void Test1() throws InterruptedException, AWTException, IOException {
 		lc = new LoanCal1(driver);
 		lc.LoanCalClick();
@@ -109,7 +109,7 @@ public class LoanCalculator {
 //		}
 	}
 	
-	@Test(priority = 8)
+	@Test(priority = 8,groups = "RegressionTest")
 	public void Test12() throws InterruptedException, AWTException {
 		lc.emi();
 		lc.adv();
@@ -120,7 +120,7 @@ public class LoanCalculator {
 
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,groups = {"SmokeTest", "RegressionTest"})
 	public void Test2() throws InterruptedException, IOException {
 		lc2 = new LoanCal2(driver);
 		lc2.LoanCal2Click();
@@ -128,7 +128,7 @@ public class LoanCalculator {
 		lc2.UI_Check2();
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups = {"SmokeTest", "RegressionTest"})
 	public void Test3() throws InterruptedException, IOException {
 		lc3 = new LoanCal3(driver);
 		lc3.LoanCal3Click();

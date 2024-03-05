@@ -3,6 +3,11 @@
 	<listeners>
 		<listener class-name="testng_hackathon.ExtentedReportManager"/>
 	</listeners>
+	<!-- <groups>
+		  <run>
+			<include name="RegressionTest"></include>
+		  </run>
+	  </groups> -->
   <test thread-count="5" name="Test">
     <classes>
       <class name="testng_hackathon.LoanCalculator"/>
