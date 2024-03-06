@@ -141,7 +141,7 @@ ExcelScript Ex = new ExcelScript();
 		
 		double Month_principle = e - Month_Interest ;
 		
-		System.out.println("Monthly interest to be paid "+Month_principle);
+		System.out.println("Monthly principal_Amount to be paid "+Month_principle);
 		
 		return test;
 	}

@@ -26,7 +26,7 @@ public class ExtentedReportManager implements ITestListener{
 	public void onStart(ITestContext context) {
 		sparkReporter=new ExtentSparkReporter(System.getProperty("user.dir")+"/reports/myreport.html");//specify location of the report
 		sparkReporter.config().setDocumentTitle("Automation Report"); // TiTle of report
-		sparkReporter.config().setReportName("Timesheet"); // name of the report
+		sparkReporter.config().setReportName("Interest Calculator"); // name of the report
 		sparkReporter.config().setTheme(Theme.DARK);
 		extent=new ExtentReports();
 		extent.attachReporter(sparkReporter);
@@ -71,13 +71,13 @@ public class ExtentedReportManager implements ITestListener{
 
 	public void onFinish(ITestContext context) {
 		extent.flush();
-//		String reportFilePath = "C:\\Users\\2303965\\eclipse-workspace\\Hackathon_Project\\reports\\myreport.html";
-//        File htmlFile = new File(reportFilePath);
-//        try {
-//			Desktop.getDesktop().browse(htmlFile.toURI());
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		String reportFilePath = "C:\\Users\\2303965\\eclipse-workspace\\Hackathon_Project\\reports\\myreport.html";
+        File htmlFile = new File(reportFilePath);
+        try {
+			Desktop.getDesktop().browse(htmlFile.toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

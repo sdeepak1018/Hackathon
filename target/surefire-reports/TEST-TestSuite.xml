@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="99.627" tests="20" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="121.077" tests="20" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -26,7 +26,7 @@
     <property name="user.variant" value=""/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="classworlds.conf" value="C:\Users\2303965\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf12862978337560125341.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\2303965\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8753173909633332357.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="C:\Program Files\Zulu\zulu-17\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Zulu/zulu-17/bin/server;C:/Program Files/Zulu/zulu-17/bin;C:\Program Files\Zulu\zulu-17\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\2303965\AppData\Local\Microsoft\WindowsApps;;C:\Users\2303965\Desktop;;."/>
@@ -59,27 +59,27 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Zulu17.32+13-CA"/>
-    <property name="m2e.build.project.data.socket.port" value="58800"/>
+    <property name="m2e.build.project.data.socket.port" value="52135"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testLogo" classname="testng_hackathon.LoanCalculator" time="0.133"/>
-  <testcase name="testLogo" classname="testng_hackathon.LoanCalculator" time="3.856"/>
-  <testcase name="Car_Loan" classname="testng_hackathon.LoanCalculator" time="7.689"/>
-  <testcase name="Car_Loan" classname="testng_hackathon.LoanCalculator" time="6.467"/>
-  <testcase name="EMI_Calculation" classname="testng_hackathon.LoanCalculator" time="0.05"/>
-  <testcase name="EMI_Calculation" classname="testng_hackathon.LoanCalculator" time="0.047"/>
-  <testcase name="Home_Loan" classname="testng_hackathon.LoanCalculator" time="1.469"/>
-  <testcase name="Home_Loan" classname="testng_hackathon.LoanCalculator" time="1.466"/>
-  <testcase name="HomeLoan_Data" classname="testng_hackathon.LoanCalculator" time="4.088"/>
-  <testcase name="HomeLoan_Data" classname="testng_hackathon.LoanCalculator" time="3.841"/>
-  <testcase name="HomeLoan_Write" classname="testng_hackathon.LoanCalculator" time="13.505"/>
-  <testcase name="HomeLoan_Write" classname="testng_hackathon.LoanCalculator" time="12.555"/>
-  <testcase name="Test1" classname="testng_hackathon.LoanCalculator" time="20.839"/>
-  <testcase name="Test1" classname="testng_hackathon.LoanCalculator" time="20.721"/>
-  <testcase name="Test12" classname="testng_hackathon.LoanCalculator" time="4.596"/>
-  <testcase name="Test12" classname="testng_hackathon.LoanCalculator" time="4.293"/>
-  <testcase name="Test2" classname="testng_hackathon.LoanCalculator" time="22.417"/>
-  <testcase name="Test2" classname="testng_hackathon.LoanCalculator" time="21.8"/>
-  <testcase name="Test3" classname="testng_hackathon.LoanCalculator" time="24.841"/>
-  <testcase name="Test3" classname="testng_hackathon.LoanCalculator" time="25.015"/>
+  <testcase name="testLogo" classname="testng_hackathon.LoanCalculator" time="0.202"/>
+  <testcase name="testLogo" classname="testng_hackathon.LoanCalculator" time="0.092"/>
+  <testcase name="Car_Loan" classname="testng_hackathon.LoanCalculator" time="10.52"/>
+  <testcase name="Car_Loan" classname="testng_hackathon.LoanCalculator" time="7.339"/>
+  <testcase name="EMI_Calculation" classname="testng_hackathon.LoanCalculator" time="0.085"/>
+  <testcase name="EMI_Calculation" classname="testng_hackathon.LoanCalculator" time="0.349"/>
+  <testcase name="Home_Loan" classname="testng_hackathon.LoanCalculator" time="3.202"/>
+  <testcase name="Home_Loan" classname="testng_hackathon.LoanCalculator" time="2.585"/>
+  <testcase name="HomeLoan_Data" classname="testng_hackathon.LoanCalculator" time="7.646"/>
+  <testcase name="HomeLoan_Data" classname="testng_hackathon.LoanCalculator" time="6.028"/>
+  <testcase name="HomeLoan_Write" classname="testng_hackathon.LoanCalculator" time="18.112"/>
+  <testcase name="HomeLoan_Write" classname="testng_hackathon.LoanCalculator" time="16.487"/>
+  <testcase name="Test1" classname="testng_hackathon.LoanCalculator" time="24.587"/>
+  <testcase name="Test1" classname="testng_hackathon.LoanCalculator" time="22.969"/>
+  <testcase name="Test12" classname="testng_hackathon.LoanCalculator" time="5.55"/>
+  <testcase name="Test12" classname="testng_hackathon.LoanCalculator" time="5.233"/>
+  <testcase name="Test2" classname="testng_hackathon.LoanCalculator" time="23.486"/>
+  <testcase name="Test2" classname="testng_hackathon.LoanCalculator" time="23.858"/>
+  <testcase name="Test3" classname="testng_hackathon.LoanCalculator" time="27.687"/>
+  <testcase name="Test3" classname="testng_hackathon.LoanCalculator" time="27.256"/>
 </testsuite>

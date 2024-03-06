@@ -9,7 +9,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
- 
+import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.annotations.Parameters;
 
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.AfterStep;
@@ -18,6 +19,7 @@ import io.cucumber.java.Scenario;
  
 public class hooks {
 	static WebDriver driver;
+	
 		@BeforeAll
 	    public static void before_or_after_all() throws IOException, InterruptedException{
 			driver=new ChromeDriver();
